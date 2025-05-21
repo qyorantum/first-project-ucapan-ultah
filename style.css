@@ -1,0 +1,85 @@
+/* membuat universal section untuk memblok semua element */
+* {
+    margin: 0; /* margin: jarak elemen; */
+    padding: 0; /* padding: jarak dalam elemen; */
+    box-sizing: border-box; /* box-sizing: aturan halaman/box, tebal; */
+}
+
+
+/* membuat element section tertentu dengan aturan declaration yang sama */
+html, body {
+    height: 100%; 
+    width: 100%; 
+}
+
+
+body {    
+    background: url( 'baymax 6.jpg' ) no-repeat; /* masukin background dari img; */
+    background-position: center center; 
+    height: 100vh; 
+    background-size: cover; /* img dijadiin full cover web; */
+    font-family: Arial, sans-serif; /* arial buat header 1 dan paragrafraf, san serif buat button; */
+    display: flex; /* gmn elemen ditampilin (mode tata letak layout), fleksibel utk ngatur posisi device lain; */  
+    justify-content: center; /* justify-content: letak content horizontal; */
+    align-items: center; /* align-items:letak content vertikal; */
+    overflow: hidden; /* overflow: misal kalo ada konten yang berlebih; */
+}
+
+
+/* membuat class selector untuk memanggil aturan declaration element <div> */
+.containerContent {
+    background-color: rgba(245, 205, 236, 0.85);
+    padding: 2rem; /* padding: gap ruang dalam box, 2 rem itu ukuran relatif; */
+    border-radius: 12px; /* border-radius: sudut box yang dibulatkan tampilannya; */
+    text-align: center; /* text-align: teks dalam box di center; */
+    width: 50%; /* width: lebar box 50% dari layar, ini biar ga berubah pas tulisannya jadi pendek; */
+    min-height: 25%; 
+}
+
+
+h1 {
+    font-size: 2.5rem; 
+    color: #333;
+    margin-bottom: 1rem;
+}
+/* penjelasan sedikit ukuran dalam css: px, rem, em, dan VH untuk desain responsif; 
+1. pixel: ukuran konsisten di berbagai device & resolusi layar. kurang responsif pd device dgn ukuran layar berbeda;
+2. ukuran relatif induk: ex, induk 16px maka 2em itu 32px. utk ngatur ukuran font dari skala font induk;
+3. root em: biasanya utk html, sama ky em tp diitung dr font elemen root, ga terpengaruh ke font elemen lain (konsisten).
+cocok utk situs web responsif;
+4. viewport height: ukuran berdasarkan tinggi layar pengguna. satu unit VH=1% dr tinggi layar;
+rangkuman: PX utk ukuran konsisten, EM & REM utk ukuran font element, VH untuk tampilan; */
+
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+
+button {
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #f54b6a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+button:hover {
+    background-color:  #ca0d30ef; 
+/* button hover itu kaya misal kursornya kita geser ke buttonnya, buttonnya jd berubah */
+}
+
+
+canvas {
+    position: fixed; /* ditempelin kaya stiker di layar, ga ikut ke scroll */
+    top: 0;
+    left: 0;
+    pointer-events: none; /* biar bisa ngeklik buttonnya, soalnya di atasnya ada canvas transparan */
+    z-index: 10; /* ditumpuk di atas elemen lain biar efek confettinya kelihatan (ditaruk paling atas) */
+}

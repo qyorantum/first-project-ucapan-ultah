@@ -1,0 +1,29 @@
+<html>
+
+<!-- bagian portofolio atau ringkasan dari isi web --> 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="website ini buat ngucapin ulang tahun" />
+    <meta name="author" content="Zoeee" />
+    <title>My First Project HTML</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- bagian dari element atau content webnya -->
+<body>
+    <canvas id= "confetti"></canvas> <!-- lukisan kosong buat nampilin confetti, tersembunyi, aktivin pake JS -->
+    <div class="containerContent" id="message">
+        <h1 class="headerContent">haloo! selamat datang ^^</h1>
+        <p class="paragrafContent">btw baymax mau ngucapin sesuatu nih buat kamu!</p>
+        <button id="buttonContent" onclick="aturanKlik()">klik aku dong! plss ˃͈◡˂͈ </button> 
+    </div>
+
+<!-- menyisipkan kode js di html (ini step akhir-akhir sih) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <audio id="audioHelloBaymax" src="hello baymax.mp3"></audio>
+    <audio id="audioConfetti" src="happy birthday baymax.mp3"></audio>
+</body>
+
+</html>
